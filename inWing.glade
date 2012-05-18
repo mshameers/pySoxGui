@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkHBox" id="hbox1">
+    <property name="visible">True</property>
+    <property name="homogeneous">True</property>
+    <child>
+      <object class="GtkLabel" id="label1">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">Label</property>
+        <property name="use_underline">True</property>
+        <property name="selectable">True</property>
+        <property name="mnemonic_widget">hscale1</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="padding">10</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkHScale" id="hscale1">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <accessibility>
+          <relation type="controlled-by" target="label1"/>
+          <relation type="labelled-by" target="label1"/>
+        </accessibility>
+        <child internal-child="accessible">
+          <object class="AtkObject" id="hscale1-atkobject">
+            <property name="AtkObject::accessible-name" translatable="yes">file progress scale</property>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="padding">5</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkButton" id="button1">
+        <property name="label" translatable="yes">button</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="receives_default">True</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+        <property name="padding">20</property>
+        <property name="position">2</property>
+      </packing>
+    </child>
+  </object>
+</interface>
